@@ -51,40 +51,37 @@
       grid-template-columns: repeat(12, 1fr);
     }
 
-    #skills {
-      display: grid;
-      grid-template-columns: repeat(12, 1fr);
-      background-color: #ED8576;
-      grid-column: 1/13;
-    }
-
-    .skills-content {
-      margin-top: 10%;
-      display: grid;
-      grid-column: 2/13;
-      grid-template-columns: repeat(12, minmax(min-content, auto));
-      justify-items: end;
-    }
-
-    #skills h4 {
-      font-size: 20px;
-    }
-
     #about-me {
       background-color: #ED8576;
       grid-column: 1 / 13;
     }
 
+
+    #about-me .about-me-content {
+      margin-top: 150px;
+      display: grid;
+      grid-template-columns: 10% 1fr 1fr 10%;
+      margin-bottom: 40px;
+    }
+
+    .text {
+      grid-column: 2 / 3;
+      display: grid;
+    }
+
     .heading {
+      grid-column: 2 / 3;
       justify-self: center;
     }
 
-    #about-me .about-me-content {
-      margin-top: 40px;
+    .image {
+      grid-column: 3 / 4;
       display: grid;
-      grid-template-columns: 50% 50%;
-      grid-column-gap: 10px;
-      margin-bottom: 40px;
+    }
+
+    .profile-img {
+      align-self: center;
+      width: 70%
     }
 
     .paragraph-wrapper {
@@ -94,7 +91,7 @@
 
     .paragraph {
       grid-column: 2/3;
-      line-height: 1.6
+      line-height: 1.6;
     }
 
     a {
@@ -188,12 +185,291 @@
       margin-left: 10%;
     }
 
+    .skills {
+      grid-column: 2 / 3;
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+      justify-items: center;
+      align-items: center;
+      background-color: #76deed;
+    }
+
+    .skills-container {
+      background-color: #76deed;
+      grid-column: 1 / 13;
+      display: grid;
+      grid-template-columns: 10% 1fr 10%;
+    }
+
+    .square-content {
+      display: grid;
+      grid-template-columns: 1fr;
+    }
+
+    .logo-golf {
+      justify-self: center;
+      width: 30%;
+
+    }
+
+    .logo-recipe {
+      width: 50%;
+      justify-self: center;
+    }
+
+    .logo-philosophy {
+      width: 40%;
+      justify-self: center;
+    }
+
     .logo-study {
-      margin-left: 11%;
+      width: 30%;
+      justify-self: center;
     }
 
     .logo-chat {
-      margin-left: 15%;
+      width: 70%;
+      justify-self: center;
+    }
+
+
+
+    /* Ipad */
+
+    @media only screen and (max-width: 1023px) and (min-width: 768px) {
+      #about-me .about-me-content {
+        margin-top: 150px;
+        display: grid;
+        grid-template-columns: 10% 1fr 10%;
+        margin-bottom: 40px;
+      }
+      .image {
+        grid-column: 2 / 3;
+        display: grid;
+      }
+      .skills {
+        grid-column: 2 / 3;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        justify-items: center;
+        align-items: center;
+        background-color: #76deed;
+      }
+    }
+
+    /*iphone x */
+
+    @media only screen and (max-width: 767px) and (min-width: 375px) {
+      #about-me .about-me-content {
+        margin-top: 150px;
+        display: grid;
+        grid-template-columns: 10% 1fr 10%;
+        margin-bottom: 40px;
+      }
+      .image {
+        grid-column: 2 / 3;
+        display: grid;
+      }
+      .skills {
+        grid-column: 1 / 3;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        justify-items: center;
+        align-items: center;
+        background-color: #76deed;
+      }
+      h1 {
+        font-size: 25px;
+      }
+      .header p {
+        font-size: 14px;
+      }
+      .header {
+        display: grid;
+        grid-template-columns: 40% 30% 30%;
+        top: 0px;
+        background-color: rgba(255, 255, 255, 0.95);
+        position: fixed;
+        width: 100%;
+        box-shadow: none;
+      }
+      .cell-number {
+        justify-self: center;
+        align-self: center;
+        grid-column: 2 / 4;
+        grid-row: 1 / 2;
+        justify-self: start;
+      }
+      .email {
+        align-self: center;
+        grid-column: 2 / 4;
+        grid-row: 1 / 2;
+        align-self: end;
+      }
+      #about-me .about-me-content {
+        margin-top: 100px;
+      }
+      #about-me h2 {
+        font-size: 100%;
+      }
+      #about-me p {
+        font-size: 15px;
+      }
+      #projects {
+        grid-template-columns: 1% [square-start] 1fr [square-end] 1%;
+      }
+      .skills h4 {
+        font-size: 12px;
+      }
+      .skills {
+        grid-column: 2 / 4;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        justify-items: center;
+        align-items: center;
+        background-color: #76deed;
+      }
+      h1 {
+        margin-bottom: 10px;
+      }
+      .chat-square {
+        grid-column: 1 / 9;
+        background-color: white;
+      }
+      .philosophy-square {
+        grid-column: 1 / 9;
+        background-color: white;
+      }
+      .golf-square {
+        grid-column: 1 / 9;
+        background-color: white;
+      }
+      .recipe-square {
+        grid-column: 1 / 9;
+      }
+      .logo-golf {
+        justify-self: center;
+        width: 40%;
+      }
+      .logo-study {
+        width: 70%;
+        justify-self: center;
+      }
+      .logo-chat {
+        width: 50%;
+        justify-self: center;
+      }
+      .logo-philosophy {
+        width: 70%;
+        justify-self: center;
+      }
+    }
+
+    /* iphone 5 */
+
+    @media only screen and (max-width: 374px) and (min-width: 320px) {
+      #about-me .about-me-content {
+        margin-top: 150px;
+        display: grid;
+        grid-template-columns: 10% 1fr 10%;
+        margin-bottom: 40px;
+      }
+      .image {
+        grid-column: 2 / 3;
+        display: grid;
+      }
+      .skills {
+        grid-column: 1 / 3;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        justify-items: center;
+        align-items: center;
+        background-color: #76deed;
+      }
+      h1 {
+        font-size: 25px;
+      }
+      .header p {
+        font-size: 14px;
+      }
+      .header {
+        display: grid;
+        grid-template-columns: 40% 30% 30%;
+        top: 0px;
+        background-color: rgba(255, 255, 255, 0.95);
+        position: fixed;
+        width: 100%;
+        box-shadow: none;
+      }
+      .cell-number {
+        align-self: center;
+        grid-column: 2 / 4;
+        grid-row: 1 / 2;
+        justify-self: start;
+      }
+      .email {
+        align-self: center;
+        grid-column: 2 / 4;
+        grid-row: 1 / 2;
+        align-self: end;
+      }
+      #about-me .about-me-content {
+        margin-top: 100px;
+      }
+      #about-me h2 {
+        font-size: 100%;
+      }
+      #about-me p {
+        font-size: 15px;
+      }
+      #projects {
+        grid-template-columns: 1% [square-start] 1fr [square-end] 1%;
+      }
+      .skills h4 {
+        font-size: 12px;
+      }
+      .skills {
+        grid-column: 2 / 4;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        justify-items: center;
+        align-items: center;
+        background-color: #76deed;
+      }
+      h1 {
+        margin-bottom: 10px;
+      }
+      .chat-square {
+        grid-column: 1 / 9;
+        background-color: white;
+      }
+      .philosophy-square {
+        grid-column: 1 / 9;
+        background-color: white;
+      }
+      .golf-square {
+        grid-column: 1 / 9;
+        background-color: white;
+      }
+      .recipe-square {
+        grid-column: 1 / 9;
+      }
+      .logo-golf {
+        justify-self: center;
+        width: 40%;
+      }
+      .logo-study {
+        width: 70%;
+        justify-self: center;
+      }
+      .logo-chat {
+        width: 50%;
+        justify-self: center;
+      }
+      .logo-philosophy {
+        width: 70%;
+        justify-self: center;
+      }
     }
   </style>
 </head>
@@ -206,34 +482,17 @@
     <h1 class="logo">Derek Johnson</h1>
     <!--Contact Info-->
     <p class="cell-number">Cell: 801-550-9114</p>
-    <p class="email">Email: siestaderek@gmail.com</p>
+    <p class="email">siestaderek@gmail.com</p>
   </div>
   <!--Main Content-->
   <div id="main-content">
-    <!--Skills-->
-    <div id="skills">
-      <div class="skills-content">
-        <h4>Javascript (ES5 & ES6)</h4>
-        <h4>CSS</h4>
-        <h4>CSS Grid</h4>
-        <h4>HTML5</h4>
-        <h4>JQuery</h4>
-        <h4>React</h4>
-        <h4>Vue</h4>
-        <h4>Ruby on Rails</h4>
-      </div>
-
-    </div>
     <!--About me-->
     <div id="about-me">
       <div class="about-me-content">
-        <div class="heading">
-          <h2>
+        <div class="text">
+          <h2 class="heading">
             <strong>About Me</strong>
           </h2>
-        </div>
-        <img src="" alt="Profile Image">
-        <div class="paragraph-wrapper">
           <div class="paragraph">
             <p>Some of my favorite things involve coding, writing, good design, editing videos, color grading, playing sports,
               and leading teams. In regards to my formal education, I am often asked- "what can you do with a philosophy
@@ -244,29 +503,43 @@
               how to code, problem-solve, and manage teams.</p>
           </div>
         </div>
+        <div class="image">
+          <img class="profile-img" src="./photos/profile-img.JPG" alt="Profile Image" style="justify-self: center">
+        </div>
       </div>
     </div>
-
+    <!--Skills-->
+    <div class="skills-container">
+      <div class="skills">
+        <h4>Javascript (ES5 & ES6)</h4>
+        <h4>CSS</h4>
+        <h4>CSS-Grid</h4>
+        <h4>HTML</h4>
+        <h4>Ruby On Rails</h4>
+        <h4>GraphQL</h4>
+        <h4>Node.js</h4>
+      </div>
+    </div>
     <!--Projects-->
     <div id="projects">
       <div class="projects-square">
         <a href="https://golf-4-life.firebaseapp.com/#/" class="golf-square">
-          <div>
-            <img class="logo" src="./photos/Golf-4-Life-Logo.png" alt="golf 4 life app" style="width: 30%;">
+          <div class="square-content">
+            <img class="logo-golf" src="./photos/Golf-4-Life-Logo.png" alt="golf 4 life app">
             <p class="center-text">I built this app using Firebase and Vue. It allows you to keep track of your golf round scores at your favorite
               courses.
             </p>
           </div>
         </a>
         <a href="https://dereks-recepi-app.herokuapp.com/" class="recipe-square">
-          <div>
-            <img class="logo" src="./photos/Recipe-App-Logo.png" alt="recipe app" style="width: 50%;">
+          <div class="square-content">
+            <img class="logo-recipe" src="./photos/Recipe-App-Logo.png" alt="recipe app">
             <p class="center-text">Built entirely with Ruby on Rails, this was my second application ever to deploy to production</p>
           </div>
         </a>
         <a href="https://paktola.herokuapp.com/" class="study-square">
-          <div>
-            <img class="logo-study" src="./photos/Study-Group-App-Logo.png" alt="paktola app" style="width: 30%;">
+          <div class="square-content">
+            <img class="logo-study" src="./photos/Study-Group-App-Logo.png" alt="paktola app">
             <p class="center-text">While in college, I noticed a common trend that many students never wanted to be the first to organize their
               study groups. I created this app so that students could organize, invite, and join study groups. Students are
               also able to share notes with eachother.
@@ -274,14 +547,14 @@
           </div>
         </a>
         <a href="https://explorer-chat.firebaseapp.com/" class="chat-square">
-          <div>
-            <img class="logo-chat" src="./photos/Chat-App-Logo.png" alt="explorer app" style="width: 70%;">
+          <div class="square-content">
+            <img class="logo-chat" src="./photos/Chat-App-Logo.png" alt="explorer app">
             <p class="center-text">This chat app was built using Firebase and Vue</p>
           </div>
         </a>
         <a href="https://shielded-tundra-38497.herokuapp.com/#/" class="philosophy-square">
-          <div>
-            <img class="logo" src="./photos/Philosophy-App-Logo.png" alt="philosophy app" style="width: 40%;">
+          <div class="square-content">
+            <img class="logo-philosophy" src="./photos/Philosophy-App-Logo.png" alt="philosophy app">
             <p class="center-text">I challenged my philosophy of mind professor to allow me to code an application instead of writing a paper for
               my final project. The purpose of the project was show that I understand the main arguments and responses between
               each philosopher that we studied during the course.</p>
